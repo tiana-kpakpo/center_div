@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{font-size: 12px}
+ 
+  .container{
+    display: grid;
+    grid-template-columns: 5% 15% auto ;
+    height: 100vh;
+    width: 100%;
+  }
+ 
+  .sidebar{
+    background-color: turquoise;
+    width: 55px;
+  }
+ 
+  p{
+    font-size: 1rem;
+  }
+
+  .logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+
+  .material-icons-outlined{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    padding: 1rem; 
+
+  }
+
+  /* .Icons{
+    color: green;
+  } */
+
+  #settings{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .Menubar{
+    /* color: ; */
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    width: 100%;
+    justify-content: center;
+
+  }
+
+  .menu-icons{
+    display: flex;
+    /* justify-content: center; */
+    padding-bottom: 50px;
+    
+
+  }
+
+  .menu-icons .material-icons-outlined{
+    padding: 0;
+
+  }
+
+  .menu-icons h4{
+    padding-left: 10px;
+  }
+
+  .main h2{
+    
+  }
+
+  .nameInputBox{
+    grid-template-columns: ;
+  }

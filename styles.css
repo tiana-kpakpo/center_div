@@ -5,9 +5,58 @@
  }
 
  .wrapper {
-    width: 100;
-    height: 100;
-    background-color: bisque;
-    color: blueviolet;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: turquoise;
+    color: rgb(58, 57, 57);
+    font-size: 1remn;
+    display: grid;
+    grid-template-columns: 22rem auto;
 
+
+ }
+
+ .wrapper .sidebar h3{
+   color: black;
+ }
+
+ .wrapper main{
+   width: 100%;
+   background-color: beige;
+   color: black;
+   margin: 0;
+ }
+
+ /* main {
+   display: flex;
+   align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 5;
+   
+} */
+
+.wrapper main .flexbox{
+display: block;
+border: 2px solid red;
+padding: 0.8rem  1rem;
+justify-content: center;
+height: 60vh;
+width: 70%;
+}
+
+ footer{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   padding: 1rem;
+   background-color: rgb(145, 58,71);
+ }
+
+ footer h3{
+   margin: 0 auto;
+   text-align: center;
+   width: 100%;
  }
