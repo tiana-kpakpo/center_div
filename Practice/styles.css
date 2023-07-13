@@ -51,21 +51,24 @@
   }
 
   .Menubar{
-    /* color: ; */
-    display: grid;
-    grid-template-rows: 50px 1fr;
-    width: 100%;
-    justify-content: center;
+   padding-left: 40px;
 
+  }
+
+  .group{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 50px;
   }
 
   .menu-icons{
     display: flex;
-    /* justify-content: center; */
-    padding-bottom: 50px;
-    
+    align-items: center;
 
   }
+
+
 
   .menu-icons .material-icons-outlined{
     padding: 0;
@@ -76,10 +79,22 @@
     padding-left: 10px;
   }
 
-  /* .main h2{
+  .main{
+    max-width: 768px;
+    padding: 45px;
     
-  } */
+    
 
-  /* .nameInputBox{
-    grid-template-columns: ;
-  } */
+    
+  }
+
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .
+
+ 
