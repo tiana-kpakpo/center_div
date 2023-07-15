@@ -95,6 +95,17 @@
     
   }
 
-  .
+  .form-content{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,2fr));
+    column-gap: 24px;
+    row-gap: 32px; 
+
+  }
+
+  .form-input{
+    grid-column: span 3;
+
+  }
 
  
