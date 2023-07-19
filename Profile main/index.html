@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profile</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="media.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
   <link rel="stylesheet"
@@ -20,7 +20,7 @@
           border_color
         </span>
         <h3>Edit Profile</h3>
-        <div></div>
+        
       </div>
       <!-- --------------- grid template --------------------- -->
       <div class="aside">
@@ -75,36 +75,36 @@
 
         <!-- --------------------right ------------------------- -->
         <div class="edit-profile">
-          <div class="name">
-            <div class="first">
-              <label for="name" class="formlable">First Name</label>
-              <input type="text" id="first name" placeholder="first name" required>
+          <form action="#">
+            <div class="grid-col">
+              <div class="form-control">
+                <label for="firstname" class="info-label">First Name</label>
+                <input type="text" id="firstname" placeholder="first name" />
+              </div>
+              <div class="form-control">
+                <label for="lastname" class="info-label">Last Name</label>
+                <input type="text" id="lastname" placeholder="last name" />
+              </div>
             </div>
-            <div class="second">
-              <label for="name" class="formlable">Last Name</label>
-              <input type="text" id="last name" placeholder="last name" required>
+            <div class="form-control">
+              <label for="school" class="info-label">School</label>
+              <input type="text" id="school" placeholder="enter school" />
             </div>
-          </div>
-          <div class="edit">
-            <label for="school" class="formlabel">School</label>
-            <input type="text" id="school" placeholder="enter school" required>
-          </div>
-          <div class="edit">
-            <label for="email" class="formlabel">Email</label>
-            <input type="text" id="email" placeholder="email" required>
-          </div>
-          <div class="edit">
-            <label for="contact" class="formlabel">Emergency Contact</label>
-            <input type="text" id="contact" placeholder="contact" required>
-            <span class="material-symbols-outlined">
-              call
-            </span>
-          </div>
-          <div class="button">
+            <div class="form-control">
+              <label for="email" class="info-label">Email</label>
+              <input type="text" id="email" placeholder="email" />
+            </div>
+            <div class="form-control contact">
+              <label for="contact" class="info-label last-child">Emergency Contact</label>
+              <input type="text" id="contact" placeholder="contact" />
+              <span class="material-symbols-outlined">
+                call
+              </span>
+            </div>
             <button class="submit-update" type="button">Submit</button>
-          </div>
+          </form>
         </div>
-        
+
         <div class="fake-height"></div>
       </div>
 
@@ -116,7 +116,6 @@
       <!-- --------------------- end of grid template ----------------------- -->
     </div>
   </div>
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./main.js"></script>

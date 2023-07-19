@@ -18,7 +18,6 @@ $(document).ready(function () {
             img.attr('src', e.target.result);
         };
 
-
     });
 
     $('.submit-update').click(function (e) {
