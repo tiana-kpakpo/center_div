@@ -10,18 +10,19 @@ $(document).ready(function() {
     uploadButton.addEventListener('click', function() {
        document.querySelector('input[type=file]').click();
        //path to image file
-       $("input[type=file]").on("change", function () {
-        var input = this;
-        if (input.files && input.files[0]) {
-          var reader = new FileReader();
-    
-          reader.onload = function (e) {
-              $('#image').attr("src", e.target.result);
-          };
-    
-          reader.readAsDataURL(input.files[0]);
-        }
-      });
+       $('input[type=file]').change(function (e) {
+        let file = e.target.files[0];
+        let reader = new FileReader();
+
+        reader.readAsDataURL(file);
+
+        reader.onload = function (e) {
+            let img = $('.img-profile .image');
+            img.attr('src', e.target.result);
+        };
+
+
+    });
     
     
     });
