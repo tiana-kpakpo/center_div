@@ -14,11 +14,24 @@ window.addEventListener('load', () => {
 
 });
 
-function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    if (sidebar.style.left === "-250px") {
-      sidebar.style.left = "0";
-    } else {
-      sidebar.style.left = "-250px";
-    }
+
+
+// JavaScript to handle sidebar toggle for mobile devices
+const sidebarToggle = document.getElementById('sidebarToggle');
+const sidebar = document.getElementById('sidebar');
+
+// Function to toggle the sidebar when the checkbox state changes
+sidebarToggle.addEventListener('change', function () {
+  if (this.checked) {
+    sidebar.classList.add('active');
+  } else {
+    sidebar.classList.remove('active');
   }
+});
+
+
+
+
+
+
+
