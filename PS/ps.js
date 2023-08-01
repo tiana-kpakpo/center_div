@@ -18,7 +18,7 @@
 
     //create LI
     const newTodo = document.createElement("li");
-    newTodo.innerText = "hey";
+    newTodo.innerText =todoInput.value;
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
 
@@ -26,22 +26,22 @@
     //check mark button
 
     const completedButton = document.createElement("button");
-    completedButton.innerHTML = "<span class="material-icons-outlined">
-    add_box
-    </span>";
-    completedButton.classList.add(complete-btn);
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
 
     //trash button 
     const trashButton = document.createElement("button");
-    trashButton.innerHTML = "<span class="material-icons-outlined">
-    add_box
-    </span>";
-    trashButton.classList.add(trash-btn);
+    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+    trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
     //append to list 
-    todoList.appendChild()
+    todoList.appendChild(todoDiv);
+
+    //claer todo input
+
+    todoInput.value="";
 
 
- }
+ } 
