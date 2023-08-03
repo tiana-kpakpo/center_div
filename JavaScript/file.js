@@ -21,6 +21,35 @@ const companies = [
     { name: 'Albert', age: 76, occupation: 'programmer' },
 ];
 
+
+const userDetails = {
+    firstName: "Jane",
+    lastName: "Daniels",
+    userName: "jane.daniels",
+    email: "jane.daniels@example.com",
+    comapny: "Example Inc.",
+    address: "1234 Example Street",
+    age : 25,
+    hobby: "Singing"
+};
+
+let keysArray = Object.keys(userDetails);
+
+let filteredKeys = keysArray.filter(key => key.length > 5);
+
+// console.log(filteredKeys);
+
+const userNames = Object.keys(userDetails)
+    .filter((key) => key.includes("Name"))
+    .reduce((object, key) => {
+        return Object.assign(object, {
+          [key]: userDetails[key]
+        });
+  }, {});
+
+// console.log(userNames);
+
+// console.log(keysArray);
   
 
 //   companies.forEach(function(company) {
@@ -157,4 +186,4 @@ let filteredUserNames = users.filter(user => user.age > 40 && user.occupation ==
     .sort((a, b) => a.age - b.age)
     .map(user => user.name);
 
-console.log(filteredUserNames);
+// console.log(filteredUserNames);
