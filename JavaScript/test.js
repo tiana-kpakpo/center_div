@@ -38,3 +38,27 @@ const sortedinfo = arryinfo.sort((a, b) => {
   })
   console.log(sortedvalues)
 
+
+  // Convert inner objects into arrays
+for (const key in info) {
+    if (Object.hasOwnProperty.call(info, key)) {
+      info[key] = Object.values(info[key]);
+    }
+  }
+  
+  console.log(info);
+
+//   // Convert inner objects into arrays, leave other properties as they are
+// for (const [key, value] of Object.entries(info)) {
+//     if (typeof value === 'object' && !Array.isArray(value)) {
+//       info[key] = Object.values(value);
+//     }
+//   }
+  
+//   console.log(info);
+
+
+// Filter and convert the 'address' property's inner object into an array
+const addressArray = Object.values(info.address);
+
+console.log(addressArray);
