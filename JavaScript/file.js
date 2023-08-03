@@ -11,6 +11,16 @@ const companies = [
   ];
   
   const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+  let users = [
+    { name: 'John', age: 25, occupation: 'gardener' },
+    { name: 'Lenny', age: 51, occupation: 'programmer' },
+    { name: 'Andrew', age: 43, occupation: 'teacher' },
+    { name: 'Peter', age: 81, occupation: 'teacher' },
+    { name: 'Anna', age: 47, occupation: 'programmer' },
+    { name: 'Albert', age: 76, occupation: 'programmer' },
+];
+
   
 
 //   companies.forEach(function(company) {
@@ -85,6 +95,8 @@ const companyNames = companies.map(company => {
 
 //sorting
 
+// function(a, b){return a - b}
+
 // sort company by start year
 const sortedCompany = companies.sort((a, b) => {
     return a.start - b.start;
@@ -117,3 +129,32 @@ const sum = ages.reduce((a, b) => {
   // })
   
     //  console.log(totalYears);
+
+
+    // let filteredUsers = [];
+// for (let i= 0; i<users.length; i++) {
+//     if (users[i].age > 40 && users[i].occupation === 'programmer' ) {
+//         filteredUsers = [...filteredUsers, users[i]];
+//     }
+// }
+// console.log(filteredUsers);
+
+
+
+// let filteredUsers = users.filter((user) => {
+//     return user.age > 40 && user.occupation === 'programmer';
+// });
+
+// console.log(filteredUsers);
+
+// let filteredUsers = users.filter(user => user.age > 20 && user.occupation === 'programmer');
+// console.log(filteredUsers);
+
+// let filteredUsers = users.filter(user => user.age > 40);
+// console.log(filteredUsers);
+
+let filteredUserNames = users.filter(user => user.age > 40 && user.occupation === 'programmer')
+    .sort((a, b) => a.age - b.age)
+    .map(user => user.name);
+
+console.log(filteredUserNames);
