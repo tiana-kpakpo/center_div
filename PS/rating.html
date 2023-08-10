@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rating Page </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="rating.css">
+</head>
+<body>
+    <div class="rating-container">
+    <div class="card-container">
+        <div class="star">
+            <span class="fa fa-star checked"></span>
+        </div>
+        <h3>How did we do?</h3>
+        <div>
+            <p>
+                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+            </p>
+        </div>
+        <div class="rating-con">
+           <span class="rating one" data-rating="1">1</span>
+           <span class="rating two" data-rating="2">2</span>
+           <span class="rating three" data-rating="3">3</span>
+           <span class="rating four" data-rating="4">4</span>
+           <span class="rating five" data-rating="5">5</span>
+           
+        </div>
+        
+        <button class="btn">Submit</button>
+    </div>
+</div>
+
+<div class="thanks-container">
+    <div class="card-container">
+        <div class="image">
+            <img src="image.png" alt="" width="100px" height="100px">
+         </div>
+         <div class="wrap">
+            <div class="rated">
+    <p>You selected <span id="the-rate"></span> out of 5</p>
+</div>
+    <h3>Thank you!</h3>
+    <p id="message" style="color: white;"></p>
+</div>
+</div>
+
+</div>
+     
+  <script>
+    const ratingContainer = document.querySelector('.rating-container')
+    const thanksContainer = document.querySelector('.thanks-container')
+    const rating = document.querySelectorAll('.rating')
+    const one = document.querySelector('.one')
+    const two = document.querySelector('.two')
+    const three = document.querySelector('.three')
+    const four = document.querySelector('.four')
+    const five = document.querySelector('.five')
+    const btn = document.querySelector('.btn')
+    const message = document.getElementById('message')
+    const theRate = document.getElementById('the-rate')
+
+    let clickedRate = false
+    let submitted = false
+
+    rating.forEach(rate => {
+        rate.addEventListener ('click', () => {
+            if (rate === one) {
+                message.textContent = "We're sorry you had a disappointing experience. We'll work to improve. Thank you for your feedback."
+                
+            } else if (rate === two){
+                message.textContent = "We're sorry you Thank you for your feedback. We'll work on enhancing your next visit. Let us know how we can better serve you. a disappointing experience. We'll work to improve. Thank you for your feedback."
+
+            } else if (rate === three){
+                message.textContent = "We appreciate your input. We're striving to meet your expectations. Feel free to suggest ways we can exceed them.r your feedback."
+
+            } else if (rate === four){
+                message.textContent = "Thanks for your positive review! We're delighted you enjoyed your experience. We're here to make it even better next time.."
+
+            } else {
+                message.textContent = "Wow, thanks for the glowing feedback! We're thrilled you had an excellent experience. Looking forward to wowing you again!."
+
+            }
+
+            clickedRate = true
+
+            theRate.innerHTML = rate.innerHTML
+
+        })
+        
+    });
+
+
+    btn.addEventListener('click', () => {
+        submitted = true
+        Clicked()
+
+    });
+
+    function Clicked (){
+        if (clickedRate && submitted){
+            thanksContainer.style.display = "flex"
+            ratingContainer.style.display = "none"
+
+        }
+    }
+
+  </script>  
+</body>
+</html>
