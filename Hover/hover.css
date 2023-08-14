@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* overflow: hidden; */
+    margin:0;
+    background-color: rgb(101, 148, 142);
+
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap-reverse; */
+    flex-wrap: wrap;
+
+}
+
+.square{
+    height:20px ;
+    width: 20px;
+    background-color: #1d1d1d;
+    box-shadow: #000;
+    margin: 2px;
+    transition: all 2s ease;
+}
+
+.square:hover{
+    /* transition properties */
+    /* transition-property: color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 2s; */
+
+    /* transition: color 2s ease-in 2s; */
+    transition-duration: 0s;
+}
+
+.square::before{
+    background-color: rgb(7, 41, 37);
+}

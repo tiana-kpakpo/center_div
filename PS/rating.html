@@ -49,6 +49,7 @@
 </div>
      
   <script>
+    //Selectors
     const ratingContainer = document.querySelector('.rating-container')
     const thanksContainer = document.querySelector('.thanks-container')
     const rating = document.querySelectorAll('.rating')
@@ -64,6 +65,7 @@
     let clickedRate = false
     let submitted = false
 
+    //Event Listeners
     rating.forEach(rate => {
         rate.addEventListener ('click', () => {
             if (rate === one) {
@@ -98,6 +100,7 @@
 
     });
 
+    //Functions
     function Clicked (){
         if (clickedRate && submitted){
             thanksContainer.style.display = "flex"

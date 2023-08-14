@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(107, 107, 230);
+    font-family: "Poppins", sans-serif;
+}
+h5{
+    color: grey;
+      
+}
+
+h4{
+    color: black;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.in-container{
+    background-color: white;
+    height: 40vh;
+    width: 33%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    padding: 2.5rem;
+    text-align: center;
+    
+}
+
+button{
+    background-color: rgb(85, 85, 238);
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+    border-radius: 0.5rem;
+}

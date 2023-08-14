@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    /* background-color: ; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page-container{
+    /* background-color: black; */
+}
+
+.top-bar{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    object-fit: cover;
+}
