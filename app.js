@@ -23,8 +23,10 @@
                     }, 3000);
                     return;
                 }
+
+                // "./Profile main/index.html"
         
-                window.location.href = `./profile/index.html?email=${email.value}`;
+                window.location.href = `./Profile main/index.html?email=${email.value}`;
         
         
         

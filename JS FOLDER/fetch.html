@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+
+    <script>
+
+        //fetch always succeeds
+
+// fetch('https://reqres.in/api/users')
+// .then(res => console.log(res))
+
+// .then(res => {
+//     if (res.ok){
+//         console.log('success')
+//     }else{
+//         console.log('unsuccessful')
+//     }
+// })
+// .then(data => console.log(data))
+
+//POST
+
+fetch('https://reqres.in/api/users', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        player: 'Kaka',
+        // club: 'Barcei'
+    })
+}).then(res => {
+    return res.json
+}).then(data => console.log(data))
+.catch(error => console.error('Error'))
+
+    </script>
+    
+</body>
+</html>
+
+
+
+

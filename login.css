@@ -16,8 +16,8 @@ body{
     width: 30%;
     /* height: vh; */
     overflow: hidden;
-    background-color: turquoise;
-    color: turquoise;
+    background-color: gray;
+    color: rgb(104, 170, 163);
     font-size: 1rem;
     border-radius: 25px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);

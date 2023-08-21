@@ -44,35 +44,6 @@
 }
 
 
-
-/* @media only screen and (max-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
-
-/* .profile .aside{
-		grid-template-columns: 1fr;
-        grid-column: 0 auto;
-        width: 50%;
-		
-	}
-
-	.profile .aside .profile-control{
-		/* width: 50%; */
-
-/* }
-
-	.grid-col{
-		grid-template-columns: 1fr;
-	}
-} */
-
-
-@media only screen and (max-width: 425px){
-	/*Small smartphones [325px -> 425px]*/
-
-    /* body{
-        font-size: 16px;
-    } */
-
     @media screen and (max-width: 480px){
         .profileContainer{
           background-color: #4b71a6;
