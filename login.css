@@ -12,9 +12,9 @@ body{
     height: 100vh;
     width: 100%;
 }
+
 .login{
     width: 30%;
-    /* height: vh; */
     overflow: hidden;
     background-color: gray;
     color: rgb(104, 170, 163);
@@ -25,13 +25,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 2rem;
-
-
-    
+    padding: 2rem 2rem;   
 }
-
-
 
 .login form{
     width: 100%;
@@ -40,8 +35,6 @@ body{
     align-items: center;
     margin: 0   auto;
     padding: 4rem 6rem;
-    
-
 }
 
 

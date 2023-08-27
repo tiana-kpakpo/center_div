@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(136, 136, 245);
+            padding: 10px;
+
+        }
+
+        .todo-app{
+            width: 100%;
+            max-width: 540px;
+            background-color: #fff;
+            margin: 100px auto 20px;
+            padding: 40px 30px 70px ;
+            border-radius: 0.4rem;
+            text-align: center;
+        }
+
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #edeef0;
+            border-radius: 30px;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        input{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 0.5rem;
+        }
+
+        button{
+            border: none;
+            outline: none;
+            padding: 16px 50px ;
+            background-color: orangered;
+            font-size: 10px;
+            cursor: pointer;
+            border-radius: 10rem;
+        }
+
+        button:hover{
+            color: orangered;
+            background-color: wheat;
+        }
+
+        ul li{
+            user-select: none;
+            cursor: pointer;
+            padding: 12px 8px 12px 50px;
+            list-style: none;
+            font-size: 17px;
+        }
+
+        ul li::before{
+            content: " ";
+            position: absolute;
+            height: 28px;
+            width: 28px;
+            border-radius: 0.5rem;
+        }
+
+        ul li.checked{
+            color: #555;
+            text-decoration: line-through;
+        }
+
+        ul li.checked::before{
+            color: orangered;
+
+        }
+
+
+        
+
+
+    </style>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do list</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="add an item">
+                <button>add</button>
+            </div>
+
+            <!-- <div> 
+                <ul id="list-container">
+                    <li class="checked">
+                        Task 1
+
+                    </li>
+                </ul>
+            </div>  -->
+        </div>
+
+    </div>
+
+    <script>
+       window.addEventListener('load',async (e) => {
+    e.preventDefault();
+
+    const allItems = await fetch("http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/items")
+    const items = await allItems.json
+
+    items.forEach(itm => {
+        const inputBox = document.getElementById("input-box")
+        const listContainer = document.getElementById("list-container")
+    })
+
+    
+
+           
+        
+        })
+
+        
+    </script>
+
+</body>
+</html>

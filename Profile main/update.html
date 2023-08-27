@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+
+  <div class="profile-container">
+    
+    <div class="edit-profile">
+      <div class="header" style="display: flex; justify-content: space-between;"><h3>Update Profile</h3>
+        <span class="material-symbols-outlined"> logout</span>
+      </div>
+      
+      <form action="#">
+        <div class="form-input">
+        <div class="grid-col">
+          <div class="form-control">
+            <label for="name" class="info-label">First Name</label>
+            <input type="text" id="firstname"/>
+          </div>
+          <div class="form-control">
+            <label for="name" class="info-label">Last Name</label>
+            <input type="text" id="lastname"/>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="school" class="info-label"> School</label>
+          <input type="school" id="school"/>
+        </div>
+  
+        <div class="form-control">
+          <label for="email" class="info-label"> Email</label>
+          <input type="email" id="email"/>
+        </div>
+  
+        <div class="form-control">
+          <label for="contact" class="info-label last-child">
+          Contact</label>
+          <div class="contact">
+          <input type="tel" id="contact" required/>
+          <span class="material-symbols-outlined"> call </span></div>
+        </div>
+
+        <button class="submit-update" type="button">Update</button>
+      </div>
+  
+        
+      </form>
+    </div>
+
+  </div>
+
+    
+
+      <script src="update.js"></script>
+    
+</body>
+</html>
+

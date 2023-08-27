@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(198, 198, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+.profile-container{
+    background-color: turquoise;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 60%;
+    border-radius: 0.7rem;
+    margin: 0.5rem;
+    gap:0.5rem;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 0.5rem;
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+    padding: 0.5rem;
+    color: white;
+
+}
+
+.profile-grid{
+   
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-gap: 1rem;
+    width: 90%;
+    height: 80%;
+    padding:1.1rem 0.2rem;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(5, 5, 58);
+    border-radius: 0.7rem;
+
+}
+
+.profile-left{
+    color: white;
+    padding: 1rem 0.2rem;
+    gap: 0.5rem;
+        
+}
+
+.image{
+    width: 6rem;
+  height: 6em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+label .bio{
+    display: flex;
+}
+
+
+
+
+
+

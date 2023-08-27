@@ -1,0 +1,18 @@
+# GET https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
+
+
+
+
+# DELETE https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
+
+GET https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
+
+
+# DELETE https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users 
+# # Content-Type: application/json
+
+# {
+#     'id': 50
+# }
+
+

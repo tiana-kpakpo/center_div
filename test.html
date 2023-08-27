@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POST Request Example</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname"><br><br>
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="responseDisplay"></div>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', async function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const formData = new FormData(this); // Get form data
+
+      try {
+        const url = 'https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl'; // Replace with your server URL
+
+        const requestOptions = {
+          method: 'POST',
+          body: formData
+        };
+
+        const response = await fetch(url, requestOptions);
+        const responseData = await response.json();
+
+        // Update the form fields with the received data
+        document.getElementById('firstname').value = responseData.firstname;
+        document.getElementById('lastname').value = responseData.lastname;
+        document.getElementById('email').value = responseData.email;
+
+        // Display the response data (optional)
+        const responseDisplay = document.getElementById('responseDisplay');
+        responseDisplay.innerHTML = `
+          <p>Server Response:</p>
+          <pre>${JSON.stringify(responseData, null, 2)}</pre>
+        `;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  </script>
+</body>
+</html>

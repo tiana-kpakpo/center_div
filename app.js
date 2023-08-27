@@ -23,8 +23,6 @@
                     }, 3000);
                     return;
                 }
-
-                // "./Profile main/index.html"
         
                 window.location.href = `./Profile main/index.html?email=${email.value}`;
         
