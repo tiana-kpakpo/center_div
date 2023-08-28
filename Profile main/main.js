@@ -55,6 +55,13 @@ $(function () {
     }
   }, 4000);
 
+  const changeProfile = document.querySelector(".header .next-page");
+
+  // -------- switch to edit profile---------------
+  changeProfile.addEventListener("click", function () {
+
+    window.location.href = './users.html'
+
   const changeProfile = document.querySelector(".header span");
   // -------- switch to edit profile---------------
   changeProfile.addEventListener("click", function () {

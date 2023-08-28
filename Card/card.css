@@ -8,6 +8,8 @@ body {
     background-color: rgb(203, 231, 160);
     gap: 2rem;
     font-size: 16px;
+    line-height: 1.5;
+    color: #778492;
     
     /* font-family: 'Source Sans Pro', sans-serif; */
     /* font-family: 'Roboto', sans-serif; */
@@ -18,23 +20,61 @@ body {
 }
 
 .dark-mode {
-    background-color: #333;
+    background-color: #3b3a3a;
     transition: background-color 0.3s, color 0.3s;
     color: inherit #333;
 }
 
-/* .Container.dark-mode{
-    color: #333;
-    background-color: #333;
-} */
-
-/* h1,  h2, h3 { */
-    /* font-family: 'Montserrat', sans-serif; */
-/* } */
-
-ul li a {
-    color: #778492;
+.dark-mode .card{
+    background-color: rgb(37, 36, 36);
+    color: rgb(19, 219, 52);
 }
+
+.dark-mode .nav{
+    background-color: rgb(37, 36, 36);
+    color: rgb(71, 165, 28);
+}
+
+.dark-mode .findmore{
+    background-color: rgb(65, 65, 250);
+    color: white;
+}
+
+h3 h1{
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.heading{
+    color: rgb(126, 120, 120);
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+
+.unstyled-list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.skills .item{
+    margin-bottom: 15px;
+}
+
+span .title {
+    color: rgb(21, 147, 197);
+}
+ul{
+    margin-bottom: 1rem;
+}
+
+/* ul li a {
+    color: #778492;
+} */
 
 a {
     text-decoration: none;
@@ -93,6 +133,8 @@ img {
     border-radius: 50%;
     object-fit: cover;
     height: 40px;
+    
+    
 
 }
 
@@ -101,6 +143,8 @@ img {
     justify-content: center;
     display: flex;
     color: white;
+    text-align: center;
+    align-items: center;
 }
 
 .socials {
@@ -172,18 +216,25 @@ img {
 }
 
 
+
 @media screen and (max-width:768px) {
     .nav-container{
         display: flex;
         flex-direction: column;
-        height: 40%;
-        width: 100vw;
+        
     }
 
     .nav{
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .imginfo{
+        display: flex;
+        flex-direction: column;
     }
 
     .about-container{
@@ -197,12 +248,4 @@ img {
     .card{
         width: 100vw;
     }
-
-    /* .nav-container {
-        /* max-width: 72rem; */
-        /* margin: 0 auto; */
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-    
-    } 
+}
