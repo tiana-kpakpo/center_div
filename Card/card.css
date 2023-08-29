@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(203, 231, 160);
+    background-color: rgb(204, 219, 182);
     gap: 2rem;
     font-size: 16px;
     line-height: 1.5;
@@ -27,12 +27,12 @@ body {
 
 .dark-mode .card{
     background-color: rgb(37, 36, 36);
-    color: rgb(19, 219, 52);
+    color: rgb(170, 169, 169);
 }
 
 .dark-mode .nav{
     background-color: rgb(37, 36, 36);
-    color: rgb(71, 165, 28);
+    color: white;
 }
 
 .dark-mode .findmore{
@@ -80,7 +80,7 @@ a {
     text-decoration: none;
 }
 
-img {
+.nav img {
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
