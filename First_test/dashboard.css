@@ -88,15 +88,11 @@ body{
     background-color: var(--color-background);
     user-select: none;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
     color : var(--color-dark);
     
     
 }
 
-/* .dark aside{
-    background-color:  var(--aside-background-color) ;
-} */
 
 .container {
     display: grid;
@@ -104,6 +100,7 @@ body{
     margin: -1 auto;
     gap: 1.8rem;
     grid-template-columns: 20rem auto 20rem;
+    overflow: none;
 }
 
 a {
@@ -140,7 +137,6 @@ small {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
-    /* object-fit: cover; */
     overflow: hidden;
 }
 .text-muted {
@@ -181,7 +177,7 @@ b {
 aside{
     height: 100vh;
     width: 100%;
-    background-color: rgb(208, 207, 207);
+    background-color: var(--aside-background-color);
 }
 
 aside .top{
@@ -190,7 +186,7 @@ aside .top{
     justify-content: space-between;
     margin-top: 1.4rem ;
     padding: 0.6rem 0.7rem;
-    /* background-color: var(--color-secondary-variant); */
+    
 }
 
 aside .logo {
@@ -281,12 +277,14 @@ aside .sidebar .pending-count {
    
 }
 
-.deleteButton{
-    background-color: wheat;
-    transform: opacity 1s;
-    opacity: 0;
+@keyframes fadeOut{
+    from{  opacity: 1; }
+    to{opacity: 0;}
 }
 
+.remove-deleted {
+    animation: fadeOut 0.5s ease-in-out;
+}
 
 
 /* ==============Main ================= */
@@ -294,10 +292,8 @@ aside .sidebar .pending-count {
 main{
     margin-top: 1.4rem;
     scrollbar-width: none;
-    /* overflow-x: scroll; */
-    /* background-color: var(--color-default-gray-light); */
     padding: 4px;
-    /* border-radius: var(--border-radius-1); */
+    
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -448,7 +444,16 @@ main .recent-order table {
     text-align: center;
     box-shadow: var(--card-shadow);
     transition: all 300ms ease;
+    /* max-height: 400px;
+    overflow: auto; */
+    
 }
+
+#table_body{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 
 main .recent-order table:hover{
     box-shadow: none;
@@ -457,7 +462,11 @@ main .recent-order table:hover{
 main table tbody td {
     height: 2.8rem;
     border-bottom: 2px solid var(--color-light);
-    color : var(--color-dark-variant)
+    color : var(--color-dark-variant);
+    max-height: 500px; 
+    overflow-y: auto;
+    
+
 }
 
 main table tbody tr:last-child td{
@@ -469,7 +478,9 @@ main .recent-order a {
     display: block;
     margin: 1rem auto;
     color: var(--primary-color);
+  
 }
+
 
 
 
@@ -595,8 +606,11 @@ main .recent-order a {
 }
 
 
-.table_body{
+.tableBody{
     overflow-y: scroll;
+    opacity: 0;
+    /* transform: ; */
+    
 }
 
 
