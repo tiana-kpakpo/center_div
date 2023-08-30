@@ -25,6 +25,10 @@ body {
     color: inherit #333;
 }
 
+.dark-mode .social-icons{
+    background-color: #3b3a3a;
+}
+
 .dark-mode .card{
     background-color: rgb(37, 36, 36);
     color: rgb(170, 169, 169);
@@ -47,12 +51,21 @@ h3 h1{
     color: #333;
 }
 
+.name h1{
+    color: gray;
+}
+
 .heading{
     color: rgb(126, 120, 120);
 }
 
 p{
     margin-bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #778492;
 }
 
 
@@ -133,9 +146,10 @@ a {
     border-radius: 50%;
     object-fit: cover;
     height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     
-    
-
 }
 
 .social-icons i {
@@ -198,10 +212,11 @@ a {
 
 .card {
     background-color: white;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     padding: 2rem;
     margin-bottom: 30px;
     gap: 0.5rem;
+
 }
 
 .icon-text {

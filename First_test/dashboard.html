@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard
-    </title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="stylesheet" href="./dashboard.css">
+<link rel="stylesheet" href="./dashboard.css">
 
 </head>
 <body>
@@ -19,8 +20,8 @@
         <aside>
             <div class="top py-2 w-full px-0">
                 <div class="logo">
-                    
-                    <img src="LoGo.png" alt="">    
+
+                    <img src="#" alt="">
                 </div>
             <!-- <h2> Orda<span class="success">ble </span> </h2>             -->
             <div class="close" id="close-btn">
@@ -43,8 +44,8 @@
                 <h3>Pending</h3>
                 <span class="pending-count"> 26 </span>
                 </a>
-               
-               
+
+
                 <a href="#">
                 <span class="material-symbols-sharp">
                     manage_accounts
@@ -154,7 +155,7 @@
 
             <div class="recent-order">
                 <h2>Recent Orders</h2>
-                
+
                 <table id="emp-table">
                     <thead>
                         <tr>
@@ -165,8 +166,8 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody >
-                     
+                    <tbody id="table_body" >
+
                     </tbody>
                 </table>
                 <a href="#">Show all</a>
@@ -180,12 +181,12 @@
                 <span class="material-icons-sharp">menu</span>
                 </button>
                 <div class="theme-toggler">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
+                    <span class="material-icons-sharp active light_mode">light_mode</span>
+                    <span class="material-icons-sharp dark_mode">dark_mode</span>
                 </div>
                 <div class="profile">
                     <div class="info">
-                        <p> Hey, <b>id="usernamePlaceholder"</b> </p>
+                        <p> Hey, <b>Isaac"</b> </p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
@@ -195,7 +196,7 @@
             </div>
             <!-- ----- end of top---------- -->
 
-            
+
 
 
              <!-- ---------------- end of recent updates ----------------- -->
@@ -216,7 +217,7 @@
                         </h5>
                         <h3>4567</h3>
                     </div>
-                    
+
                 </div>
 
                 <div class="item offline">
@@ -234,7 +235,7 @@
                         </h5>
                         <h3>1100</h3>
                     </div>
-                    
+
                 </div>
 
                 <div class="item customers">
@@ -252,7 +253,7 @@
                         </h5>
                         <h3>839</h3>
                     </div>
-                    
+
                 </div>
                 <div class="item add-product" >
                     <div>
@@ -271,7 +272,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
-    <script src="./app.js"> </script>
-    <!-- <script src="main.js"></script> -->
+    <script src="./main.js"> </script>
+    <script src="app.js"></script>
 </body>
 </html>
