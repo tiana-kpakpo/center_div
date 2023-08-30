@@ -77,7 +77,7 @@ async function handleDelete(event) {
       }
 
     try {
-      let confirmed
+      
         const result = await fetch(deleteUrl, {
             method: 'DELETE',
             headers: {
@@ -98,6 +98,52 @@ async function handleDelete(event) {
         console.error('Error deleting data:', error);
     }
 }
+
+// async function handleDelete(event) {
+//   const deleteButton = event.target;
+//   const employeeId = deleteButton.getAttribute('data-id');
+//   const deleteUrl = `https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/employee/${employeeId}`;
+
+//   // Ask for confirmation before proceeding
+//   const confirmed = window.confirm('Are you sure you want to delete this employee?');
+
+//   if (!confirmed) {
+//       return; // User canceled the deletion
+//   }
+
+//   try {
+//       const result = await fetch(deleteUrl, {
+//           method: 'DELETE',
+//           headers: {
+//               "Content-Type": "application/json"
+//           }
+//       });
+
+//       const response = await result.json();
+//       console.log('Delete response:', response);
+
+//       if (response) {
+//           // Show a confirmation message
+//           window.alert('Employee deleted successfully.');
+
+//           // Add the faded class to initiate the fade-out transition
+//           deleteButton.classList.add('faded');
+
+//           // Wait for the transition to complete and then remove the button from the DOM
+//           deleteButton.addEventListener('transitionend', () => {
+//               deleteButton.remove();
+//           }, { once: true });
+
+//           // Refresh the table after successful deletion
+//           getAllResponses();
+//       } else {
+//           console.log('Delete operation did not return a response.');
+//       }
+//   } catch (error) {
+//       console.error('Error deleting data:', error);
+//   }
+// }
+
 
 
 

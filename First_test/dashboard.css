@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
+    --aside-background-color: rgb(208, 207, 207);
     --primary-color: #378383;
     --secondary-color: #f7f7f7;
     --color-danger : #dc3545;
@@ -51,9 +52,10 @@
         --color-dark: #edeffd;
         --color-dark-variant: #a3bdcc;
         --color-light: rgba(0, 0, 0, 0.4);
-        --color-secondary-variant: #2b2d31;
+        --color-secondary-variant: #131d30;
         --box-shadow: 0 2rem 3rem var(--color-light);
       --color-default-gray: #7a7f84;
+      --aside-background-color: #181a1e;
 
     }
 
@@ -86,9 +88,15 @@ body{
     background-color: var(--color-background);
     user-select: none;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
     color : var(--color-dark);
-    /* overflow: none; */
+    
+    
 }
+
+/* .dark aside{
+    background-color:  var(--aside-background-color) ;
+} */
 
 .container {
     display: grid;
@@ -168,6 +176,8 @@ b {
     color: var(--color-light);
 }
 
+
+
 aside{
     height: 100vh;
     width: 100%;
@@ -209,6 +219,7 @@ aside .sidebar {
     top: 3rem;
 }
 
+
 aside h3 {
     font-size: 500;
 }
@@ -234,6 +245,12 @@ aside .sidebar a:last-child{
     width: 100%;
 }
 
+aside .sidebar a:last-child:hover{
+    background-color: var(--color-info-light);
+    color: var(--primary-color);
+    margin-left: 0;
+}
+
 aside .sidebar a.active{
     background-color: var(--color-info-light);                                                                                                                                               
     color: var(--primary-color);
@@ -242,7 +259,6 @@ aside .sidebar a.active{
 
 aside .sidebar a.active::before{
     content: '';
-
     height: 100%;
     width: 6px;
     background-color: var(--primary-color);
@@ -265,6 +281,12 @@ aside .sidebar .pending-count {
    
 }
 
+.deleteButton{
+    background-color: wheat;
+    transform: opacity 1s;
+    opacity: 0;
+}
+
 
 
 /* ==============Main ================= */
@@ -272,6 +294,7 @@ aside .sidebar .pending-count {
 main{
     margin-top: 1.4rem;
     scrollbar-width: none;
+    /* overflow-x: scroll; */
     /* background-color: var(--color-default-gray-light); */
     padding: 4px;
     /* border-radius: var(--border-radius-1); */
@@ -453,13 +476,13 @@ main .recent-order a {
 /* =================== right ================ */
 .right {
     margin-top : 1.4rem;
+    padding-right: 9px;
 }
 
 .right .top {
     display: flex;
-    justify-content: end;
     gap: 2rem;
-    /* background-color: var(--color-default-gray); */
+    
 }
 
 .right .top button {
@@ -569,6 +592,11 @@ main .recent-order a {
 .right .sales-analytics .item.add-product > div h3 {
 
     font-weight: 500;
+}
+
+
+.table_body{
+    overflow-y: scroll;
 }
 
 
