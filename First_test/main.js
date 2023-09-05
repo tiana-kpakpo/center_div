@@ -1,5 +1,14 @@
 console.log('response.js is working')
 
+ //get admin name
+ const adminName = document.querySelector('#admin-name');
+ //get all url parameters
+ const params = new URLSearchParams(window.location.search);
+ 
+ if(params.has('name')){
+     adminName.innerHTML = params.get('name');
+ }
+
 async function getAllResponses() {
   const url = 'https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/employer/1';
 
